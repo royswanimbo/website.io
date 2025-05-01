@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #networkCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://www.exascaleproject.org/wp-content/uploads/2019/11/PathForward-scaled.jpg);
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: #0a1efb;
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer {
+            color: white;
+            background-color: #343a40;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-user-circle"></i> Roys Wanimbo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-user"></i> Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Canvas -->
+    <canvas id="networkCanvas"></canvas>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <img src="https://lh3.googleusercontent.com/a/ACg8ocJYWllAJIqXpMuJMWzgXAttduM4F_gspNT3bxRqFy7oKh7LatE=s288-c-no"
+            alt="Foto Profil" class="profile-pic">
+        <h1 id="nama">Roys Wanimbo</h1>
+        <p>Mahasiswa Informatika | Web Developer | Anggota Sacode</p>
+        <p>Saya seorang mahasiswa di Kampus Uningrat Papua yang sedang mendalami pemrograman dan web development.</p>
+        <h2>Sosmed Saya</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/Apatis01/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/roys.wanimbo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/roys-wanimbo/?originalSubdomain=id" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+        <button class="btn btn-primary mt-3"><a href="about.html">Tentang</a></button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Roys Wanimbo - Personal Website</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function changeName() {
+            let newName = prompt("Masukkan nama baru:");
+            if (newName) {
+                document.getElementById("nama").innerText = newName;
+            }
+        }
+
+        const canvas = document.getElementById("networkCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                radius: 3
+            });
+        }
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    let dx = particles[i].x - particles[j].x;
+                    let dy = particles[i].y - particles[j].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = "#00f";
+                ctx.fill();
+            }
+            drawLines();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Website pribadi Roys Wanimbo - Junior Web Developer" />
+    <meta name="author" content="Roys Wanimbo" />
+    <title>Roys Wanimbo - Web Developer</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.6rem;
+            color: #ffffff !important;
+        }
+
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+        header.hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://png.pngtree.com/thumb_back/fh260/background/20240610/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title i {
+            margin-right: 10px;
+            color: #0d6efd;
+        }
+
+        .card-text li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #495057;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0d6efd;
+            transform: scale(1.2);
+        }
+
+        img.img-fluid {
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        a.btn-outline-success {
+            border-color: #198754;
+            color: #198754;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a.btn-outline-success:hover {
+            background-color: #198754;
+            color: white;
+        }
+
+        nav {
+            background-image: url(/sacode.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Roys Wanimbo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang"><i class="fas fa-user"></i> Tentang</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#motivasi"><i class="fas fa-bolt"></i> Motivasi</a>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html"><i class="fas fa-envelope"></i>
+                            Kontak</a>
+                    </li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Web Developer & UI Designer</h1>
+            <p>Saya mahasiswa Informatika di Universitas Uningrat Papua. Saya suka membangun website yang keren dan
+                bermanfaat.</p>
+            <a href="#tentang" class="btn btn-primary mt-4"><i class="fas fa-user-circle"></i> Lihat Profil</a>
+        </div>
+    </header>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="/a.png" alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold"><i class="fas fa-user"></i> Tentang Saya</h2>
+                    <p class="text-muted">Hai! Saya <strong> Roys Wanimbo</strong>, lahir pada 19 Juni 2003 dan kini
+                        berusia 21 tahun di tahun 2025.</p>
+                    <p class="text-muted">Saya adalah mahasiswa jurusan Informatika di Universitas Uningrat Papua, yang
+                        memiliki semangat tinggi dalam dunia teknologi dan desain digital. Sejak muda, saya percaya
+                        bahwa setiap baris kode bisa mengubah dunia, terutama untuk tanah kelahiran saya di Papua.</p>
+                    <p class="text-muted">Saat ini saya aktif sebagai <strong>Junior Web Developer</strong> dan bagian
+                        dari komunitas <strong>CodePapua</strong>, tempat saya terus belajar dan berkontribusi dalam
+                        proyek-proyek digital. Fokus utama saya adalah pada pengembangan antarmuka (UI/UX), desain web
+                        responsif, dan membangun solusi kreatif berbasis web.</p>
+                    <p class="text-muted">Bagi saya, membangun website bukan hanya soal tampilan—tetapi bagaimana
+                        teknologi bisa menyampaikan pesan, memudahkan hidup orang lain, dan membuka akses baru bagi
+                        siapa saja yang ingin berkembang.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- projek 1 -->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="/4.jpg" alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold"><i class="fas fa-user"></i> Project 1</h2>
+                    <p class="text-muted">
+                        Saya seorang <strong>mahasiswa</strong> di Kampus UNIGRAT PAPUA yang sedang menempuh ilmu di
+                        bidang informatika.
+                        Namun saya sadar bahwa belajar di bangku kuliah saja belum cukup. Saya mencari komunitas dan
+                        pengalaman nyata di dunia coding, khususnya di tanah Papua.
+                        Maka saya bergabung dengan <strong>komunitas Code Papua</strong> dan mulai belajar secara
+                        otodidak. <br><br>
+                        Dengan semangat belajar dan tekad yang kuat, saya ingin menjadi solusi digital di tanah
+                        Papua—menciptakan aplikasi, membangun website, dan bahkan memecahkan masalah lokal melalui
+                        teknologi.
+                        <strong>Website ini adalah langkah awal saya memperkenalkan karya dan semangat itu kepada
+                            dunia.</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- projek 2 -->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="/ddd.jpg" alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-muted">
+                        Saat ini saya sedang mengikuti PLK (Praktik Lapangan Kerja) di kantor <strong>Papua Youth
+                            Creative Hub</strong>.
+                        Di sini saya dipercaya khusus untuk mengembangkan website <strong>pych-top.id</strong> sebagai
+                        media promosi berbagai produk UMKM binaan yang menjangkau pasar nasional hingga internasional.
+                        <br><br>
+                        Banyak pengalaman dan pembelajaran berharga yang saya dapatkan, termasuk kesempatan ikut
+                        pelatihan dan kegiatan dari pusat.
+                        Saya bangga bisa menjadi bagian dari perubahan teknologi di Papua. <strong>Proyek ini menjadi
+                            bukti nyata kontribusi saya dalam dunia digital.</strong>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- projek 3 -->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="/www.jpg" alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold"><i class="fas fa-user"></i> Projek 3</h2>
+
+                    <p class="text-muted">
+                        Saat ini saya aktif berkolaborasi dengan berbagai pihak dan membuka jasa pembuatan website untuk
+                        kebutuhan sekolah, portofolio, hingga pemasaran produk (marketing).
+                        Jika Anda ingin bekerja sama atau memiliki ide digital, saya sangat terbuka untuk
+                        kolaborasi.<br><br>
+
+                        Saya juga sedang mengajar dasar-dasar coding kepada siapa saja, di mana saja — yang penting ada
+                        niat dan tempat yang nyaman untuk belajar bersama.
+                        <strong>Bersama Junior Developer Anak Ilin</strong>, saya percaya bahwa berbagi ilmu adalah cara
+                        terbaik membangun generasi Papua yang kreatif dan melek teknologi. <br><br>
+
+                        <em>Setiap baris kode yang saya tulis, bukan hanya soal program — tapi tentang harapan,
+                            semangat, dan perubahan positif dari ujung timur Indonesia.</em>
+                    </p>
+
+                    <p style="color: #0d6efd;"><strong>📝 Saya belajar degan berbagai Metode itu, Perbayar, tapi Anda
+                            belajar dari saya gratis.
+                            ✅</strong></p>
+
+                    <p style="color: #0d6efd;"><strong>📝 Jika ingin tahu, carilah ilmu sesuai dengan yang kamu perlu
+                            kuasai. ✅</strong></p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- projek 4 -->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="/or.jpg" alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold"><i class="fas fa-user"></i> Projek 4</h2>
+
+                    <p class="text-muted">
+                        <strong>Hello world!</strong> Ini adalah momen spesial ketika Kami berfoto bersama Bapak Pdt.
+                        Sem Wakerkwa, S.Th — seorang tokoh rohani dan Gembala Sidang Gereja Baptis Yohanes Entrop.
+                        Dalam acara tersebut, Kami memberikan beliau penghargaan berupa piagam dan menyampaikan materi
+                        yang sangat menyentuh tentang <em>"Pentingnya Pertumbuhan Rohani di Tengah Perkembangan
+                            Zaman."</em><br><br>
+
+                        Bagi Kami, pesan beliau menjadi pengingat bahwa di balik kemajuan teknologi dan pencapaian dunia
+                        digital, kita tetap harus menjaga kekuatan rohani dan nilai-nilai moral.
+                        <strong>Iman dan pengetahuan adalah dua sayap yang harus terbang bersama, agar generasi muda
+                            Papua tidak hanya cerdas secara intelektual, tapi juga kuat secara spiritual.</strong>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- projek 5-->
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.OUPP2xvfW9XtpIEJl_zQXAHaHa?cb=iwc1&w=1024&h=1024&rs=1&pid=ImgDetMain"
+                        alt="Foto Roys" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold"><i class="fas fa-user"></i> Projek 5</h2>
+                    <p><strong>Belajar Coding: Kunci untuk Masa Depan</strong></p>
+                    <p style="font-size: 1rem; color: #555;">
+                        Coding adalah keterampilan yang sangat penting di era digital saat ini. Dengan menguasai bahasa
+                        pemrograman, Anda bisa menciptakan aplikasi, situs web, dan solusi inovatif yang berdampak luas
+                        bagi masyarakat.<br><br>
+
+                        Jangan takut untuk memulai perjalanan belajar coding, karena setiap baris kode yang Anda tulis
+                        bukan hanya tentang teknologi — tapi tentang membangun masa depan, membuka peluang, dan
+                        memberdayakan diri sendiri maupun orang lain.<br><br>
+
+                        <strong>Ingat:</strong> Semua developer hebat dulunya juga pemula. Yang membedakan adalah mereka
+                        berani mencoba, terus belajar, dan tidak menyerah. Anda pun bisa!
+                    </p>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivasi -->
+    <section id="motivasi" class="py-5 bg-light">
+        <div class="container">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title"><i class="fas fa-bolt"></i> Motivasi Saya</h3>
+                    <ul class="card-text">
+                        <li>🚀 Belajar dan berkembang dalam dunia teknologi.</li>
+                        <li>🌐 Menciptakan solusi digital untuk masyarakat.</li>
+                        <li>🎨 Mengekspresikan kreativitas melalui desain UI/UX.</li>
+                        <li>🤝 Berkolaborasi dengan komunitas dan teman sejawat.</li>
+                        <li>🎯 Membangun karier sebagai freelancer dan profesional IT.</li>
+                        <li>🧠 Mengasah kemampuan problem-solving lewat proyek nyata.</li>
+                    </ul>
+
+
+
+                    <!DOCTYPE html>
+                    <html lang="en">
+
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Grafik Skill Saya</title>
+                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                    </head>
+
+                    <body style="font-family: Arial, sans-serif; padding: 30px; background-color: #f4f6f8;">
+
+                        <h2 style="text-align:center;">Grafik Skill Saya</h2>
+                        <div id="chart" style="max-width: 700px; margin: auto;"></div>
+
+                        <script>
+                            var options = {
+                                series: [{
+                                    data: [90, 80, 60, 50, 60]
+                                }],
+                                chart: {
+                                    type: 'bar',
+                                    height: 400
+                                },
+                                plotOptions: {
+                                    bar: {
+                                        horizontal: true,
+                                        distributed: true,
+                                        barHeight: '70%'
+                                    }
+                                },
+                                colors: [
+                                    '#e34c26',  // HTML (oranye merah)
+                                    '#264de4',  // CSS (biru)
+                                    '#f0db4f',  // JavaScript (kuning)
+                                    '#8892be',  // PHP (ungu kebiruan)
+                                    '#00758f'   // MySQL (biru gelap)
+                                ],
+                                dataLabels: {
+                                    enabled: true,
+                                    formatter: function (val) {
+                                        return val + '%';
+                                    },
+                                    style: {
+                                        fontSize: '14px',
+                                        fontWeight: 'bold',
+                                        colors: ['#000']
+                                    }
+                                },
+                                xaxis: {
+                                    categories: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+                                    max: 100,
+                                    labels: {
+                                        formatter: function (val) {
+                                            return val + '%';
+                                        },
+                                        style: {
+                                            fontSize: '13px'
+                                        }
+                                    }
+                                },
+                                title: {
+                                    text: 'Skill Saya',
+                                    align: 'center',
+                                    style: {
+                                        fontSize: '20px',
+                                        fontWeight: 'bold'
+                                    }
+                                },
+                                tooltip: {
+                                    y: {
+                                        formatter: function (val) {
+                                            return val + '%';
+                                        }
+                                    }
+                                }
+                            };
+
+                            var chart = new ApexCharts(document.querySelector("#chart"), options);
+                            chart.render();
+                        </script>
+
+                    </body>
+
+                    </html>
+
+                    <a href="https://wa.me/082198924636?text=Hello%20Kaka%20Roys%20!"
+                        class="btn btn-outline-success mt-3 d-flex align-items-center">
+                        <i class="fab fa-whatsapp fa-2x me-2"></i>
+                        <span>Hubungi Saya</span>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2025 Roys Wanimbo. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
